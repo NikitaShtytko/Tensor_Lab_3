@@ -126,9 +126,9 @@ tf.keras.experimental.CosineDecay(
 * Темп 0.0001
 <img src="./rate/logs/cos/logs-cos-rate-0001/epoch_learning_rate.svg">
 
-### Значение decay_steps = 1000 слишком маленькое, поэтому на графиках видно, что наш тем не изменяется или программа не может просчитать столь маленькое значение
+### Значение decay_steps = 1000 слишком маленькое для данного метода, поэтому на графике выглядит как плоская линия при любых значениях темпа обучения
 
-* Темп 0.001
+* Темпы 0.01, 0.001, 0.0001
 <img src="./rate/logs/cos/logs-cos-rate-001-1000/epoch_learning_rate.svg">
 
 ### Вывод:
@@ -181,15 +181,15 @@ tf.keras.experimental.CosineDecayRestarts(
 **График функции потерь:** 
 <img src="./logs-cos-restart/10000/epoch_loss.svg">
 
-### Графики темпа обучения с decay_steps = 10000
+### Графики темпа обучения
 
-* Темп 0.01
+* Темп 0.01 Оранжевый - first_decay_steps = 10000 / Красный - first_decay_steps = 1000
 <img src="./rate/logs/cos-restart/logs-restart-rate-01/epoch_learning_rate.svg">
 
-* Темп 0.001
+* Темп 0.001 Оранжевый - first_decay_steps = 10000 / Красный - first_decay_steps = 1000
 <img src="./rate/logs/cos-restart/logs-restart-rate-001/epoch_learning_rate.svg">
 
-* Темп 0.0001
+* Темп 0.0001 Оранжевый - first_decay_steps = 10000 / Красный - first_decay_steps = 1000
 <img src="./rate/logs/cos-restart/logs-restart-rate-0001/epoch_learning_rate.svg">
 
 ### Вывод:
