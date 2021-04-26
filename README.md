@@ -119,8 +119,10 @@ tf.keras.experimental.CosineDecay(
 
 * Темп 0.01
 <img src="./rate/logs/cos/logs-cos-rate-01/epoch_learning_rate.svg">
+
 * Темп 0.001
 <img src="./rate/logs/cos/logs-cos-rate-001/epoch_learning_rate.svg">
+
 * Темп 0.0001
 <img src="./rate/logs/cos/logs-cos-rate-0001/epoch_learning_rate.svg">
 
@@ -178,8 +180,10 @@ tf.keras.experimental.CosineDecayRestarts(
 
 * Темп 0.01
 <img src="./rate/logs/cos-restart/logs-restart-rate-01/epoch_learning_rate.svg">
+
 * Темп 0.001
 <img src="./rate/logs/cos-restart/logs-restart-rate-001/epoch_learning_rate.svg">
+
 * Темп 0.0001
 <img src="./rate/logs/cos-restart/logs-restart-rate-0001/epoch_learning_rate.svg">
 
