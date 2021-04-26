@@ -115,6 +115,15 @@ tf.keras.experimental.CosineDecay(
 **График функции потерь:** 
 <img src="./logs-cos/alpha-100/0.001-10000/epoch_loss.svg">
 
+###Графики метрики точности с decay_steps = 10000
+**График темпа обучения:**
+* Темп 0.01
+<img src="./rate/logs/cos/logs-cos-rate-01/epoch_learning_rate.svg">
+* Темп 0.001
+<img src="./rate/logs/cos/logs-cos-rate-001/epoch_learning_rate.svg">
+* Темп 0.0001
+<img src="./rate/logs/cos/logs-cos-rate-0001/epoch_learning_rate.svg">
+
 ### Вывод:
 При значении alpha = 0, лучшие значения при decay_steps = 1000 имеет зелёный график, точность которого на валидационных данных равна 67,45%, при decay_steps = 10000 максимальную точность имеет синий график 67,5%. В обоих случая набольшая точность достигается при темпе 0.0001. Ближайшее максимальное значения для других темпов обучения равно 64,73% при decay_steps = 1000 и 64,83% при decay_steps = 10000.
 Если значение alpha увеличить до 100, максимальная точность уменьшится до 64.66% для decay_steps = 10000 и до 64,83% для decay_steps = 1000. Таким образом, наилучшее значение точности сеть достигает при значениях decay_steps = 10000, alpha = 0 и темпом 0.0001. То есть в данном случае, как и вы предыдущем, наименьшее значение темпа обучения дало лучший результат. Увеличение alpha приводит к ухудшению результата, 67,5% при alpha = 0 и 64,66% при alpha = 0, при одинаковых остальных параметрах.
@@ -162,8 +171,17 @@ tf.keras.experimental.CosineDecayRestarts(
 **График метрики точности:** 
 <img src="./logs-cos-restart/10000/epoch_categorical_accuracy.svg">
 
-**График функции потерь::** 
+**График функции потерь:** 
 <img src="./logs-cos-restart/10000/epoch_loss.svg">
+
+###Графики метрики точности с decay_steps = 10000
+**График темпа обучения:**
+* Темп 0.01
+<img src="./rate/logs/cos-restart/logs-restart-rate-01/epoch_learning_rate.svg">
+* Темп 0.001
+<img src="./rate/logs/cos-restart/logs-restart-rate-001/epoch_learning_rate.svg">
+* Темп 0.0001
+<img src="./rate/logs/cos-restart/logs-restart-rate-0001/epoch_learning_rate.svg">
 
 ### Вывод:
 Из графиков видно, при decay_steps = 1000 увеличение значения параметров t_mul, m_mul приводит к улучшению точности с 67,45% до 67,67%. Однако при значении decay_steps = 10000 аналогичный эксперимент приводит к ухудшению точности с 67,81% до 67,67%. Лучший результат точности в 67,81% получен при значениях decay_steps = 10000, t_mul = 2, m_mul = 1.

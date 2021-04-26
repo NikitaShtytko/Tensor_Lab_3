@@ -21,7 +21,7 @@ for gpu in gpus:
   tf.config.experimental.set_memory_growth(gpu, True)
 
 
-LOG_DIR = 'logs-restart-10000-rate'
+LOG_DIR = 'logs-cos-rate-01-10000'
 BATCH_SIZE = 32
 NUM_CLASSES = 101
 RESIZE_TO = 224
@@ -71,9 +71,12 @@ def main():
   validation_dataset = dataset.skip(train_size)
 
   model = build_model()
+  
+  
+  learning_rate = tf.keras.experimental.CosineDecay(0.01, 10000)
 
   model.compile(
-    optimizer=tf.optimizers.Adam(lr=0.001),
+    optimizer=tf.optimizers.Adam(learning_rate = learning_rate),
     loss=tf.keras.losses.categorical_crossentropy,
     metrics=[tf.keras.metrics.categorical_accuracy],
   )
@@ -85,7 +88,6 @@ def main():
     validation_data=validation_dataset,
     callbacks=[
       tf.keras.callbacks.TensorBoard(log_dir),
-      LearningRateScheduler(tf.keras.experimental.CosineDecayRestart(0.001, 10000, 1, 2, 100.0)),
     ]
   )
 
