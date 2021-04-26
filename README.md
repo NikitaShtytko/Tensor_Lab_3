@@ -68,10 +68,10 @@ tf.keras.experimental.CosineDecay(
    / Зеленый - темп 0.0001 на валидационной выборке
 
 **График метрики точности:**
-<img src="./logs-cos/alpha=0/1000/epoch_categorical_accuracy.svg">
+<img src="./logs-cos/alpha-0/1000/epoch_categorical_accuracy.svg">
 
 **График функции потерь:** 
-<img src="./logs-cos/alpha=0/1000/epoch_loss.svg">
+<img src="./logs-cos/alpha-0/1000/epoch_loss.svg">
 
 
 ### Alpha = 0, decay_steps = 10000
@@ -86,10 +86,10 @@ tf.keras.experimental.CosineDecay(
    / Синий - темп 0.0001 на валидационной выборке
 
 **График метрики точности:**
-<img src="./logs-cos/alpha=0/10000/epoch_categorical_accuracy.svg">
+<img src="./logs-cos/alpha-0/10000/epoch_categorical_accuracy.svg">
 
 **График функции потерь:** 
-<img src="./logs-cos/alpha=0/10000/epoch_loss.svg">
+<img src="./logs-cos/alpha-0/10000/epoch_loss.svg">
 
 
 ### Alpha = 100, decay_steps = 1000
@@ -98,10 +98,10 @@ tf.keras.experimental.CosineDecay(
    / Синий - темп 0.001 на валидационной выборке
 
 **График метрики точности:**
-<img src="./logs-cos/alpha=100/0.001-1000/epoch_categorical_accuracy.svg">
+<img src="./logs-cos/alpha-100/0.001-1000/epoch_categorical_accuracy.svg">
 
 **График функции потерь:** 
-<img src="./logs-cos/alpha=100/0.001-1000/epoch_loss.svg">
+<img src="./logs-cos/alpha-100/0.001-1000/epoch_loss.svg">
 
 
 ### Alpha = 100, decay_steps = 10000
@@ -110,10 +110,10 @@ tf.keras.experimental.CosineDecay(
    / Синий - темп 0.001 на валидационной выборке
 
 **График метрики точности:**
-<img src="./logs-cos/alpha=100/0.001-10000/epoch_categorical_accuracy.svg">
+<img src="./logs-cos/alpha-100/0.001-10000/epoch_categorical_accuracy.svg">
 
 **График функции потерь:** 
-<img src="./logs-cos/alpha=100/0.001-10000/epoch_loss.svg">
+<img src="./logs-cos/alpha-100/0.001-10000/epoch_loss.svg">
 
 ### Вывод:
 При значении alpha = 0, лучшие значения при decay_steps = 1000 имеет зелёный график, точность которого на валидационных данных равна 67,45%, при decay_steps = 10000 максимальную точность имеет синий график 67,5%. В обоих случая набольшая точность достигается при темпе 0.0001. Ближайшее макимальное значения для других темпов обучения равно 64,73% при decay_steps = 1000 и 64,83% при decay_steps = 10000.
