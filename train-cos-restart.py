@@ -21,8 +21,8 @@ for gpu in gpus:
   tf.config.experimental.set_memory_growth(gpu, True)
 
 
-LOG_DIR = 'logs'
-BATCH_SIZE = 64
+LOG_DIR = 'logs-restart-0001-10000'
+BATCH_SIZE = 32
 NUM_CLASSES = 101
 RESIZE_TO = 224
 TRAIN_SIZE = 101000
@@ -85,7 +85,7 @@ def main():
     validation_data=validation_dataset,
     callbacks=[
       tf.keras.callbacks.TensorBoard(log_dir),
-      LearningRateScheduler(tf.keras.experimental.CosineDecayRestarts(0.0001, 0, 2.0, 1.0, 0.0, None),
+      LearningRateScheduler(tf.keras.experimental.CosineDecayRestarts(0.0001, 10000, 20.0, 10.0, 0.0, None),
 )
     ]
   )
