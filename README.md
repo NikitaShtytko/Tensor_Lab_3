@@ -183,13 +183,13 @@ tf.keras.experimental.CosineDecayRestarts(
 
 ### Графики темпа обучения
 
-* Темп 0.01 Оранжевый - first_decay_steps = 10000 / Красный - first_decay_steps = 1000
+* Темп 0.01 Оранжевый - first_decay_steps = 1000 / Красный - first_decay_steps = 10000
 <img src="./rate/logs/cos-restart/logs-restart-rate-01/epoch_learning_rate.svg">
 
-* Темп 0.001 Оранжевый - first_decay_steps = 10000 / Красный - first_decay_steps = 1000
+* Темп 0.001 Оранжевый - first_decay_steps = 1000 / Красный - first_decay_steps = 10000
 <img src="./rate/logs/cos-restart/logs-restart-rate-001/epoch_learning_rate.svg">
 
-* Темп 0.0001 Оранжевый - first_decay_steps = 10000 / Красный - first_decay_steps = 1000
+* Темп 0.0001 Оранжевый - first_decay_steps = 1000 / Красный - first_decay_steps = 10000
 <img src="./rate/logs/cos-restart/logs-restart-rate-0001/epoch_learning_rate.svg">
 
 ### Вывод:
