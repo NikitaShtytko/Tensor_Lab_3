@@ -115,7 +115,7 @@ tf.keras.experimental.CosineDecay(
 **График функции потерь:** 
 <img src="./logs-cos/alpha-100/0.001-10000/epoch_loss.svg">
 
-###Графики темпа обучения с decay_steps = 10000
+### Графики темпа обучения с decay_steps = 10000
 
 * Темп 0.01
 <img src="./rate/logs/cos/logs-cos-rate-01/epoch_learning_rate.svg">
